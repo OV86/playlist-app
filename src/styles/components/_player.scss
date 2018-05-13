@@ -1,0 +1,22 @@
+.player-container {
+  max-width: 550px;
+  margin: $m-size auto;
+}
+.player {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.player iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.no-songs-available {
+    width: 50%;
+    margin: auto;
+}

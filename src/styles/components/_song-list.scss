@@ -1,0 +1,28 @@
+.remove-btn {
+  margin-left: $s-size;
+  color: red;
+}
+
+.song-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.song-title {
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+
+.link-btn {
+  text-decoration: none;
+  color: $main-dark;
+  font-weight: bold;
+}
+
+.artist {
+  margin: 0 10px 0 0;
+}
+
+.song-list-item > div {
+  justify-content: space-between !important;
+}

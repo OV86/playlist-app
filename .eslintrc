@@ -44,9 +44,9 @@
     "react/no-did-mount-set-state": "off",
     "no-param-reassign": "off",
     "no-trailing-spaces": "off",
-    "import/no-named-as-default": "off",
     "function-paren-newline": "off",
     "import/first": "off",
+    "no-useless-escape": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
