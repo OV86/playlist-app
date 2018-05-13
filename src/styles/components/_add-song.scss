@@ -1,7 +1,7 @@
 .song-form {
-  justify-content: space-between;
   max-width: 1024px;
-  margin: 20px auto;
+  margin: $s-size auto;
+  width: 100%;
 }
 
 .form-title {
@@ -14,9 +14,9 @@
 
 .form-url {
   margin: 0 0.5rem !important;
-  width: 40%;
+  width: 45%;
 }
 
 .add-new-song {
-  margin: 10px 10px !important;
+  margin: 0.5rem 0.5rem !important;
 }
