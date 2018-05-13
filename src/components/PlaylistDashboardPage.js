@@ -1,6 +1,5 @@
 import React from 'react';
 import SongList from './SongList';
-// import SongListFilters from './SongListFilters';
 import AddSong from './AddSong';
 import Player from './Player';
 

@@ -9,7 +9,7 @@ const SongList = (props) => (
     <div className="song-list">
       <List component="nav">
         {
-          props.songs.length === 0 ? (
+          props.songs.length === 0 ? ( // check if songs array empty
             <p className="no-songs-available">No songs to display. Add a song below.</p>
           ) : (
               props.songs.map((song) => {

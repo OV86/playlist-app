@@ -6,7 +6,6 @@ import SongForm from './SongForm';
 class AddSong extends React.Component {
   onSubmit = (song) => {
     this.props.addSong(song);
-    // this.props.history.push('/');
   };
   render() {
     return (

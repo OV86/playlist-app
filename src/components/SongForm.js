@@ -27,7 +27,7 @@ class SongForm extends React.Component {
 
   onUrlChange = (e) => {
     const url = e.target.value;
-
+    // script src https://gist.github.com/takien/4077195
     const getYouTubeId = (urlToParse) => {
       urlToParse = urlToParse.split(/(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/)/);
       return undefined !== urlToParse[2] ? urlToParse[2].split(/[^0-9a-z_\-]/i)[0] : urlToParse[0];
@@ -43,8 +43,9 @@ class SongForm extends React.Component {
   };
 
   onSubmit = (e) => {
-    e.preventDefault(); // prevent the default page reload behaviour on submit
-
+    // prevent the default page reload behaviour on submit
+    e.preventDefault();
+    // check if url and id exist. If not display error
     if (!this.state.url && !this.state.id) {
       this.setState(() => ({ error: 'Please provide a Youtube URL.' }));
     } else {
@@ -56,6 +57,7 @@ class SongForm extends React.Component {
         url: this.state.url,
         id: this.state.id,
       });
+      // reset form fields to empty string
       this.state.title = '';
       this.state.artist = '';
       this.state.url = '';
