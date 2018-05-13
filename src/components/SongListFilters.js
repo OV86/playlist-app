@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import setTextFilter from '../actions/filters';
+import TextField from 'material-ui/TextField';
 
 class SongListFilters extends React.Component {
   onTextChange = (e) => {
@@ -9,15 +10,24 @@ class SongListFilters extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="filter-songs">
-          Filter by artist:
-          <input
-            type="text"
-            value={this.props.filters.text}
-            onChange={this.onTextChange}
-          />
-        </div>
+      // don't display filter if no songs added
+      <div className="filter-songs">
+
+        {
+          this.props.songs.length === 0 ? (
+            '') : (
+              <div className="filter-container">
+                <TextField
+                  type="text"
+                  className="artist-filter"
+                  name="filter"
+                  onChange={this.onTextChange}
+                  value={this.props.filters.text}
+                  placeholder="Filter by artist"
+                />
+              </div>
+            )
+        }
       </div>
     );
   }
@@ -25,7 +35,8 @@ class SongListFilters extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    filters: state.filters
+    filters: state.filters,
+    songs: state.songs
   };
 };
 
